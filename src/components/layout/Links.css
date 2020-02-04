@@ -1,0 +1,21 @@
+.link {
+  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 3;
+  padding: 10px;
+}
+
+.logOut {
+  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 3;
+  padding: 10px;
+}
+
+.logOut:hover {
+  color: red;
+}
