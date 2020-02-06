@@ -12,10 +12,10 @@ class SignedInLinks extends Component {
     
     return (
       <ul className="right" >
-        <li><NavLink className="link" to="/create" >New Message</NavLink></li>
+        <li><NavLink className="signed-in-link" to="/create" >New Message</NavLink></li>
         <li><a className="logOut" href="/" onClick={signOut} >Log Out</a></li>
         <li>
-          <NavLink to={`/account/${isUserSignedIn}`} className="btn btn-floating pink lighten-1" >
+          <NavLink to={`/account/${isUserSignedIn}`} className="profile btn btn-floating pink lighten-1" >
             {authExists ? authExists.initials : stateInitials}
           </NavLink>
         </li>

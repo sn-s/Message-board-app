@@ -3,6 +3,7 @@ import M from "materialize-css";
 import { Redirect } from "react-router-dom";
 import MessageSummary from "../messages/MessageSummary";
 import AccountDetailsList from "../subcomponents/accountComponents/AccountDetailsList";
+import "./Account.css"
 
 import { connect } from "react-redux";
 import { getFirestore } from "../../store/actions/messageActions"; 
@@ -34,12 +35,10 @@ class Account extends Component {
 
   componentDidMount() {
     const elems = document.querySelectorAll('.collapsible');
-    const options = {} 
-    M.Collapsible.init(elems, options);    
+    M.Collapsible.init(elems);    
     this.props.getFirestore()
     const elems2 = document.querySelectorAll('.modal');
-    const options2 = {} 
-    M.Modal.init(elems2, options2)
+    M.Modal.init(elems2)
   }
 
   handleChange = (e) => {
@@ -74,7 +73,7 @@ class Account extends Component {
     if(!authExists) return <Redirect to="/signin" />
 
     return (
-      <div className="container" style={{marginTop: "50px", width: "750px"}} >
+      <div className="container"  >
 
         <ul className="collapsible">
           <li className="active center-align">
@@ -108,7 +107,7 @@ class Account extends Component {
             <div className="collapsible-header grey lighten-3"><i className="material-icons">settings</i>Settings</div>
             <div className="collapsible-body white" style={borderStyle}> 
               <div className="center" >
-                <h5 >Change email
+                <h5 className="change-text" >Change email
                 <button 
                   style={{margin: "15px", backgroundColor: "#ec407a"}}
                   className="btn-small" onClick={() => this.setState({emailClick: true})} >Yes
@@ -135,7 +134,7 @@ class Account extends Component {
                   </form>}
               </div>
               <div className="center" >
-                <h5>Change password
+                <h5 className="change-text" >Change password
                 <button 
                   style={{margin: "15px", backgroundColor: "#ec407a"}}
                   className="btn-small" onClick={() => this.setState({passwordClick: true})} >Yes
@@ -164,11 +163,11 @@ class Account extends Component {
                 </form>}
               </div>
               <div className="center" >
-                <h5>Delete account
+                <h5 className="change-text" >Delete account
                 <button 
                   style={{margin: "15px"}}
                   className="btn-small red modal-trigger"
-                  data-target="modal1" >Yes
+                  data-target="modal2" >Yes
                 </button>
                 </h5>
               </div>
@@ -177,7 +176,7 @@ class Account extends Component {
 
         </ul>
 
-        <div id="modal1" className="modal">
+        <div id="modal2" className="modal">
           <div className="modal-content">
             <h4>Delete account</h4>
             <p>Are you sure you want to delete your account?</p>
@@ -190,7 +189,6 @@ class Account extends Component {
             </button>
           </div>
         </div>
-
       </div>
     )
   }

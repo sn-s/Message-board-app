@@ -104,7 +104,7 @@ class AccountDetailsList extends Component {
           <i className="material-icons circle" >{icon}</i>
           <span className="title">{title}</span> 
           {type === "email" 
-            ? <span className="secondary-content" >click settings to change</span> 
+            ? <p className="change-email-text secondary-content" >click settings to change</p>
             : <button className="secondary-content" onClick={() => this.setState({editClick: true})} ><i className="material-icons">edit</i></button>}
         </li>
         {this.state.editClick && formType}

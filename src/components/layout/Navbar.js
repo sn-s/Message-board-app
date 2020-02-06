@@ -13,8 +13,10 @@ const Navbar = ({ isUserSignedIn }) => {
   return (
     <nav className="nav-wrapper grey darken-3">
       <div className="container">
-        <Link to="/" className="brand-logo left" >Chit-Chat</Link>
-        {navLinks}
+        <Link to="/" className="brand-logo left">Chit-Chat</Link>
+        <div className="nav-links" >
+          {navLinks}
+        </div>
       </div>
     </nav>
   )

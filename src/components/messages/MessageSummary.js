@@ -11,8 +11,7 @@ class MessageSummary extends Component {
 
   componentDidMount() {
     const elems = document.querySelectorAll('.modal');
-    const options = {} 
-    M.Modal.init(elems, options)
+    M.Modal.init(elems)
   }
   
   handleClick = () => { 
@@ -55,7 +54,9 @@ class MessageSummary extends Component {
           <div className="modal-footer">
             <button 
               className="modal-close waves-effect btn-flat red white-text"
-              onClick={this.handleClick}>Yes</button>
+              onClick={this.handleClick}>
+              Yes
+            </button>
           </div>
         </div>
 
