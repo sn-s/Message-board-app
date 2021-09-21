@@ -1,8 +1,8 @@
 // import components
-import firebase from "firebase/app";
-import "firebase/firestore";
-import "firebase/auth";
-import "firebase/functions";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+import "firebase/compat/auth";
+import "firebase/compat/functions";
 
 const config = {
   apiKey: "AIzaSyBeL50uQozl75sBsBVJS78zG4mWgMS5hv8",
@@ -11,7 +11,7 @@ const config = {
   projectId: "message-board-3cbab",
   storageBucket: "message-board-3cbab.appspot.com",
   messagingSenderId: "563288636866",
-  appId: "1:563288636866:web:45685d015f7eac639c2a5b"
+  appId: "1:563288636866:web:45685d015f7eac639c2a5b",
 };
 
 // initialise firebase with config
